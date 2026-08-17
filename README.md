@@ -3,7 +3,7 @@
 > **Real-time Indian Railway telemetry dashboard** — live GPS, route maps, weather, elevation, and station ETAs for any of India's 13,000+ trains.
 
 <p align="center">
-  <img src="docs/screenshots/live-tracking.png" alt="RailGaadi Live Tracking Dashboard" width="100%">
+  <img src="docs/screenshots/live_tracking.png" alt="RailGaadi Live Tracking Dashboard" width="100%">
 </p>
 
 <p align="center">
@@ -16,16 +16,26 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)](https://www.typescriptlang.org)
 
 ---
+
 ## 🚆 What is RailGaadi?
 
-RailGaadi is a real-time Indian railway intelligence platform designed to provide
-a richer way to understand train journeys.
+RailGaadi is a real-time Indian railway intelligence dashboard built to provide a richer visual understanding of train journeys.
 
-Instead of showing only a basic running status, RailGaadi combines live train
-telemetry with interactive maps, station timelines, weather conditions,
-terrain/elevation and geographic context.
+Instead of displaying only conventional train-running information, RailGaadi combines live railway telemetry with:
 
-The goal is to give passengers a complete visual picture of their journey.
+- 🗺️ Interactive vector maps
+- 📍 Live train location
+- 🚉 Station-by-station journey progress
+- ⏱️ Delay and ETA information
+- ⛅ Weather conditions
+- ⛰️ Terrain and elevation data
+- 🧭 Geographic context around the railway route
+
+The application is designed around a simple idea:
+
+> **Turn railway telemetry into a visual journey experience.**
+
+Train data is dynamically fetched based on the selected train number, while supporting services provide additional geographic, weather, and terrain information.
 
 ---
 ## ⚙️ How It Works
@@ -61,6 +71,69 @@ Live map + train telemetry
 | 🚉 Station Timeline | Full route schedule with completion progress & search filter |
 | 💾 Favourites & History | Local storage, persistent across sessions |
 | 🔗 Shareable Links | `/live/{trainNumber}` with tab hash persistence |
+
+---
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+<p align="center">
+  <img src="docs/screenshots/homepage.png" alt="RailGaadi Homepage" width="100%">
+</p>
+
+### 🔎 Train Search
+
+<p align="center">
+  <img src="docs/screenshots/search_panel.png" alt="RailGaadi Train Search" width="100%">
+</p>
+
+### 📡 Live Train Tracking
+
+<p align="center">
+  <img src="docs/screenshots/live_tracking.png" alt="RailGaadi Live Train Tracking" width="100%">
+</p>
+
+### 🗺️ Interactive Vector Map
+
+<p align="center">
+  <img src="docs/screenshots/interactive_map.png" alt="RailGaadi Interactive Vector Map" width="100%">
+</p>
+
+### ⛅ Weather Companion
+
+<p align="center">
+  <img src="docs/screenshots/weather.png" alt="RailGaadi Weather Companion" width="100%">
+</p>
+
+### ⛰️ Terrain & Elevation
+
+<p align="center">
+  <img src="docs/screenshots/elevation.png" alt="RailGaadi Terrain and Elevation" width="100%">
+</p>
+
+---
+
+## 🌐 Demo
+
+> 🚧 A public demo is currently being prepared.
+
+For now, RailGaadi can be run locally using the setup instructions below.
+
+---
+
+## ⭐ Key Highlights
+
+- 🔎 Search trains by number or name
+- 📡 Fetch live train telemetry from RailRadar
+- 📍 Display the train's current geographic position
+- 🗺️ Visualize journeys using MapLibre GL and MapTiler
+- 🚉 Track station-by-station journey progress
+- ⛅ View weather around relevant stations
+- ⛰️ Explore terrain and elevation along the journey
+- 🧭 Display geographic context using OpenStreetMap data
+- 🔗 Open shareable train tracking URLs using `/live/{trainNumber}`
+- 💾 Persist favourites and recently viewed trains locally
+- 🔄 Refresh live telemetry without recreating the map
 
 ---
 
@@ -133,36 +206,36 @@ npm run dev
 
 ---
 
-## 🛠️ Architecture
+## 🏗️ Architecture
 
-```
-railgaadi/
-├── src/                    # React frontend (Vite + TypeScript)
-│   ├── api/client.ts       # Type-safe API client
-│   ├── components/
-│   │   ├── journey/        # StatusCard, StationTimeline, WeatherWidget, ElevationProfile, GeoContextWidget
-│   │   ├── map/            # JourneyMap (MapLibre GL + MapTiler)
-│   │   ├── search/         # TrainSearch with autocomplete
-│   │   └── ui/             # ErrorBoundary, shared UI
-│   ├── hooks/              # TanStack Query data hooks
-│   ├── pages/
-│   │   ├── Home/           # Landing page with search
-│   │   └── Journey/        # Live tracking dashboard
-│   └── stores/             # Zustand (map follow mode)
-│
-└── server/                 # Express backend (Node + TypeScript)
-    ├── src/
-    │   ├── api/routes/v1.ts        # All REST endpoints
-    │   ├── cache/MemoryCache.ts    # In-memory TTL cache
-    │   ├── middleware/             # requestId, X-Response-Time, validate
-    │   ├── providers/
-    │   │   ├── railradar/          # RailradarAdapter
-    │   │   ├── openweather/        # OpenWeatherAdapter
-    │   │   ├── opentopography/     # OpenTopographyAdapter
-    │   │   └── overpass/           # OverpassAdapter
-    │   └── utils/CircuitBreaker.ts # Provider fault isolation
-    └── src/__tests__/api.test.ts   # Integration tests
-```
+RailGaadi follows a provider-based architecture where external data sources are isolated behind backend adapters.
+
+This allows railway, weather, terrain and geographic services to be consumed through a consistent internal interface.
+
+```text
+                         ┌──────────────────┐
+                         │   React Client   │
+                         │ TypeScript + Vite│
+                         └────────┬─────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │   Express API    │
+                         │   Node + TS      │
+                         └────────┬─────────┘
+                                  │
+             ┌────────────────────┼────────────────────┐
+             ▼                    ▼                    ▼
+       ┌────────────┐      ┌────────────┐      ┌──────────────┐
+       │ RailRadar  │      │ OpenWeather│      │ OpenTopo-    │
+       │ Telemetry  │      │ Weather    │      │ graphy       │
+       └────────────┘      └────────────┘      └──────────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │ Overpass / OSM   │
+                         │ Geographic Data  │
+                         └──────────────────┘
 
 ---
 
@@ -222,4 +295,47 @@ cd server && npm run build  # compiles TypeScript to /dist
 
 ---
 
-*Built with ❤️ for Indian Railway travellers.*
+## 🤝 Contributing
+
+Contributions, suggestions and improvements are welcome.
+
+### 1. Fork the repository
+
+Create your own fork of the RailGaadi repository.
+
+### 2. Clone your fork
+
+```bash
+git clone https://github.com/YOUR_USERNAME/RailGaadi.git
+cd RailGaadi
+
+---
+
+## 🙏 Acknowledgements
+
+RailGaadi is built using and integrating several open data sources and developer platforms:
+
+- [RailRadar](https://railradar.in/) — railway telemetry
+- [MapTiler](https://www.maptiler.com/) — vector map tiles
+- [MapLibre GL JS](https://maplibre.org/) — interactive map rendering
+- [OpenStreetMap](https://www.openstreetmap.org/) — geographic data
+- [Overpass API](https://overpass-api.de/) — OpenStreetMap data queries
+- [OpenWeather](https://openweathermap.org/) — weather information
+- [OpenTopography](https://opentopography.org/) — terrain and elevation data
+
+---
+
+# 14. Add License
+
+At the bottom of the README, add:
+
+```md
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  Built with ❤️ and TypeScript for Indian railway travellers.
+</p>
