@@ -2,6 +2,15 @@
 
 > **Real-time Indian Railway telemetry dashboard** — live GPS, route maps, weather, elevation, and station ETAs for any of India's 13,000+ trains.
 
+<p align="center">
+  <img src="docs/screenshots/live-tracking.png" alt="RailGaadi Live Tracking Dashboard" width="100%">
+</p>
+
+<p align="center">
+  A real-time railway intelligence dashboard for exploring train journeys across India.
+</p>
+
+
 [![Built with React](https://img.shields.io/badge/React-18-61dafb?logo=react)](https://react.dev)
 [![MapLibre GL](https://img.shields.io/badge/MapLibre_GL-JS-blue)](https://maplibre.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)](https://www.typescriptlang.org)
