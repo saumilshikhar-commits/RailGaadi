@@ -38,6 +38,7 @@ The application is designed around a simple idea:
 Train data is dynamically fetched based on the selected train number, while supporting services provide additional geographic, weather, and terrain information.
 
 ---
+
 ## ⚙️ How It Works
 
 ```text
@@ -146,36 +147,61 @@ For now, RailGaadi can be run locally using the setup instructions below.
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-org/railgaadi.git
-cd railgaadi
+git clone https://github.com/saumilshikhar-commits/RailGaadi.git
+cd RailGaadi
 npm install
 cd server && npm install && cd ..
 ```
 
+---
+
 ### 2. Configure Environment Variables
 
-**Frontend** — copy `.env.example` to `.env`:
+RailGaadi uses environment variables for external API services.
+
+#### Frontend
+
+Copy the example environment file:
+
 ```bash
 cp .env.example .env
 ```
 
+Then open `.env` and add your own API keys:
+
 ```env
 VITE_API_URL=http://localhost:3001
-VITE_MAPTILER_API_KEY=GLZT0bA5P5y5xQPuy2Yl
+VITE_MAPTILER_API_KEY=your_maptiler_api_key
+VITE_GEOAPIFY_API_KEY=your_geoapify_api_key
 ```
 
-**Backend** — create `server/.env`:
+#### Backend
+
+Create a file named:
+
+```text
+server/.env
+```
+
+Then add:
+
 ```env
 NODE_ENV=development
 PORT=3001
-RAILRADAR_API_KEY=rg_1598fd24ba834eb89efe9997de6d9a75
-OPENWEATHER_API_KEY=your_openweather_key
-OPENTOPOGRAPHY_API_KEY=your_opentopography_key
-MAPTILER_API_KEY=GLZT0bA5P5y5xQPuy2Yl
+
+RAILRADAR_API_KEY=your_railradar_api_key
+OPENWEATHER_API_KEY=your_openweather_api_key
+OPENTOPOGRAPHY_API_KEY=your_opentopography_api_key
+MAPTILER_API_KEY=your_maptiler_api_key
+
 ALLOWED_ORIGINS=http://localhost:5173
 RATE_LIMIT_SEARCH=30
 RATE_LIMIT_LIVE=60
 ```
+
+> ⚠️ **Important:** Never commit `.env` or `server/.env` to GitHub. Keep your API keys private and use `.env.example` to document the required variables.
+
+---
 
 ### 3. Start Development Servers
 
@@ -196,13 +222,26 @@ npm run dev
 
 ## 🔑 API Keys
 
-| Provider | Key Variable | Get Free Key |
+RailGaadi uses external APIs for live railway telemetry, interactive maps, weather, terrain and geographic services.
+
+| Provider | Environment Variable | Purpose |
 |---|---|---|
-| RailRadar | `RAILRADAR_API_KEY` | [railradar.in](https://railradar.in) |
-| MapTiler | `VITE_MAPTILER_API_KEY` | [maptiler.com](https://maptiler.com) |
-| OpenWeather | `OPENWEATHER_API_KEY` | [openweathermap.org](https://openweathermap.org/api) |
-| OpenTopography | `OPENTOPOGRAPHY_API_KEY` | [opentopography.org](https://opentopography.org) |
-| Overpass OSM | *(none required)* | Public endpoint |
+| RailRadar | `RAILRADAR_API_KEY` | Live train telemetry |
+| MapTiler | `VITE_MAPTILER_API_KEY` | Interactive vector maps |
+| OpenWeather | `OPENWEATHER_API_KEY` | Weather information |
+| OpenTopography | `OPENTOPOGRAPHY_API_KEY` | Terrain and elevation |
+| Geoapify | `VITE_GEOAPIFY_API_KEY` | Geographic services |
+| Overpass OSM | No key required | OpenStreetMap geographic data |
+
+### Getting API Keys
+
+- [RailRadar](https://railradar.in/)
+- [MapTiler](https://www.maptiler.com/)
+- [OpenWeather](https://openweathermap.org/api)
+- [OpenTopography](https://opentopography.org/)
+- [Geoapify](https://www.geoapify.com/)
+
+> 🔐 **Security:** Never commit real API keys to the repository. Keep API keys in local `.env` files and use `.env.example` to document required variables.
 
 ---
 
@@ -301,13 +340,61 @@ Contributions, suggestions and improvements are welcome.
 
 ### 1. Fork the repository
 
-Create your own fork of the RailGaadi repository.
+Fork the RailGaadi repository on GitHub.
 
 ### 2. Clone your fork
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/RailGaadi.git
 cd RailGaadi
+```
+
+### 3. Create a branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+### 4. Install dependencies
+
+```bash
+npm install
+cd server && npm install && cd ..
+```
+
+### 5. Configure environment variables
+
+Create your local `.env` and `server/.env` files using the example configuration provided above.
+
+Never commit real API keys.
+
+### 6. Make your changes
+
+Implement your feature or fix and test it locally.
+
+### 7. Build the project
+
+```bash
+npm run build
+cd server && npm run build
+```
+
+### 8. Commit your changes
+
+```bash
+git add .
+git commit -m "feat: describe your change"
+```
+
+### 9. Push your branch
+
+```bash
+git push origin feature/your-feature
+```
+
+### 10. Open a Pull Request
+
+Open a Pull Request on GitHub describing your changes and testing performed.
 
 ---
 
@@ -322,14 +409,9 @@ RailGaadi is built using and integrating several open data sources and developer
 - [Overpass API](https://overpass-api.de/) — OpenStreetMap data queries
 - [OpenWeather](https://openweathermap.org/) — weather information
 - [OpenTopography](https://opentopography.org/) — terrain and elevation data
+- [Geoapify](https://www.geoapify.com/) — geographic services
 
 ---
-
-# 14. Add License
-
-At the bottom of the README, add:
-
-```md
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
