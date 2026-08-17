@@ -1,0 +1,153 @@
+.geo-context-widget {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 4px 0 0;
+}
+
+/* Header */
+.geo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.geo-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.geo-icon {
+  font-size: 1.2rem;
+}
+
+.geo-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px;
+  letter-spacing: -0.01em;
+}
+
+.geo-subtitle {
+  font-size: 0.74rem;
+  color: #64748b;
+  display: block;
+}
+
+.geo-count-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0d9488;
+  background: #ccfbf1;
+  border: 1px solid #99f6e4;
+  padding: 2px 9px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* Layer toggle chips */
+.layer-toggles {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.layer-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.layer-chip:hover {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+  color: #0d9488;
+}
+
+.layer-chip.selected {
+  background: #f0fdfa;
+  border-color: #0d9488;
+  color: #0d9488;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.12);
+}
+
+.chip-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.chip-label {
+  line-height: 1;
+}
+
+/* Loading Skeleton */
+.geo-loading-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Feature Cards Grid */
+.geo-features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.geo-feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+
+.geo-feature-card:hover {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+  transform: translateY(-1px);
+}
+
+.geo-feature-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.geo-feature-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.geo-feature-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.geo-feature-meta {
+  font-size: 0.68rem;
+  color: #64748b;
+  font-weight: 500;
+}

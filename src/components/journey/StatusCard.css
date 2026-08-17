@@ -1,0 +1,254 @@
+.main-status-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+/* Header inside status card */
+.status-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.status-tags-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-train-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #0d9488;
+  background: #ccfbf1;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid #99f6e4;
+}
+
+.status-delay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.status-delay-badge.ontime {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.status-delay-badge.delayed {
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+}
+
+.status-gps-unavailable-badge {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #d97706;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.status-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-radius: 14px;
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0d9488;
+  margin-bottom: 18px;
+}
+
+.status-tags-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-eta-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.status-refresh-btn {
+  color: #64748b;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.15s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.status-refresh-btn:hover {
+  color: #0d9488;
+  background: #f0fdfa;
+}
+
+/* Title Section */
+.status-title-section {
+  margin-bottom: 24px;
+}
+
+.status-train-name {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+
+.status-train-route {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 3 Metrics Grid */
+.status-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.status-metric-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metric-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-icon-wrap.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.metric-icon-wrap.blue {
+  background: #ccfbf1;
+  color: #0d9488;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.metric-value-primary {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.metric-unit {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.metric-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.metric-separator {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.metric-value-secondary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.metric-subtext {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Distance column with progress ring */
+.distance-col {
+  justify-content: space-between;
+}
+
+.metric-progress-ring {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring-text {
+  position: absolute;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0d9488;
+}
+
+/* Card footer */
+.status-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .status-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .distance-col {
+    flex-direction: row;
+  }
+}

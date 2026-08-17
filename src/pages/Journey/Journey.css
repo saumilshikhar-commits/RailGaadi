@@ -1,0 +1,369 @@
+/* ── Journey Page — White & Bluish-Green Theme ──────────────────────────── */
+.journey-page {
+  --jp-bg: #f8fafc;
+  --jp-card-bg: #ffffff;
+  --jp-card-border: #e2e8f0;
+  --jp-card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --jp-text-primary: #0f172a;
+  --jp-text-secondary: #475569;
+  --jp-text-tertiary: #94a3b8;
+  --jp-brand: #0d9488;          /* Bluish-Green / Teal 600 */
+  --jp-brand-hover: #0f766e;    /* Dark Teal 700 */
+  --jp-brand-light: #f0fdfa;    /* Teal 50 tint */
+  --jp-brand-accent: #14b8a6;   /* Teal 500 */
+  
+  min-height: 100vh;
+  background-color: var(--jp-bg);
+  color: var(--jp-text-primary);
+  padding: 80px 24px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── Top Bar Controls ─────────────────────────────────────────────────────── */
+.journey-top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.back-to-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.18s ease;
+}
+
+.back-to-search-btn:hover {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+  color: #0d9488;
+  transform: translateX(-2px);
+}
+
+.top-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.18s ease;
+}
+
+.action-pill-btn:hover {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+  color: #0d9488;
+}
+
+.action-pill-btn.active {
+  background: #f0fdfa;
+  color: #0d9488;
+  border-color: #0d9488;
+}
+
+/* ── View Mode Tab Selector Bar ─────────────────────────────────────────────── */
+.journey-tab-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 9999px;
+  width: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+.journey-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.journey-tab-btn:hover {
+  color: #0f172a;
+}
+
+.journey-tab-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.25);
+}
+
+/* ── Layout Grid ──────────────────────────────────────────────────────────── */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.journey-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.journey-sidebar-col {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Intelligence Section Cards ────────────────────────────────────────────── */
+.journey-section-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journey-section-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 28px -4px rgba(15, 23, 42, 0.06);
+}
+
+.map-card-section {
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.section-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0d9488;
+  background: #ccfbf1;
+  border: 1px solid #99f6e4;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.map-container-box {
+  height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.03);
+}
+
+/* ── Skeleton screens ─────────────────────────────────────────────────────── */
+.status-skeleton-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 160px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
+.sk-line {
+  border-radius: 8px;
+  background: linear-gradient(90deg,
+    #f1f5f9 0%,
+    #e2e8f0 50%,
+    #f1f5f9 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+.timeline-skeleton-wrap {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
+.sk-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sk-node {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.sk-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Error Boundary Card ────────────────────────────────────────────────── */
+.error-boundary-card, .error-fallback-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #dc2626;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── Error Page ───────────────────────────────────────────────────────────── */
+.journey-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f8fafc;
+}
+
+.journey-error-inner {
+  text-align: center;
+  max-width: 460px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.journey-error-inner h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.journey-error-inner p {
+  font-size: 0.88rem;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.journey-error-sub {
+  font-size: 0.8rem !important;
+  color: #94a3b8 !important;
+}
+
+.journey-error-icon {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.journey-retry-btn {
+  background: #f0fdfa !important;
+  border: 1px solid #99f6e4 !important;
+  color: #0d9488 !important;
+  border-radius: 9999px !important;
+  padding: 9px 20px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+.journey-error-back {
+  display: inline-block;
+  padding: 9px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.journey-error-back:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-sidebar-col {
+    position: static;
+    max-height: 550px;
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-page {
+    padding: 70px 16px 40px;
+  }
+
+  .map-container-box {
+    height: 380px;
+  }
+}
