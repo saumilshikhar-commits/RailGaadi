@@ -57,6 +57,7 @@ Live map + train telemetry
 + weather
 + elevation
 + geographic context
+```
 
 ---
 
@@ -267,7 +268,7 @@ This allows railway, weather, terrain and geographic services to be consumed thr
              ▼                    ▼                    ▼
        ┌────────────┐      ┌────────────┐      ┌──────────────┐
        │ RailRadar  │      │ OpenWeather│      │ OpenTopo-    │
-       │ Telemetry  │      │ Weather    │      │ graphy       │
+       │ Telemetry  │      │ Weather    │      │   graphy     │
        └────────────┘      └────────────┘      └──────────────┘
                                   │
                                   ▼
@@ -275,6 +276,7 @@ This allows railway, weather, terrain and geographic services to be consumed thr
                          │ Overpass / OSM   │
                          │ Geographic Data  │
                          └──────────────────┘
+```
 
 ---
 
