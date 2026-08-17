@@ -17,6 +17,27 @@
 
 ---
 
+## 🛠️ Tech Stack
+
+<p align="center">
+
+  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white" alt="Express.js">
+  <img src="https://img.shields.io/badge/MapLibre_GL-396CB2?logo=maplibre&logoColor=white" alt="MapLibre GL">
+  <img src="https://img.shields.io/badge/MapTiler-1F6FEB?logo=maptiler&logoColor=white" alt="MapTiler">
+  <img src="https://img.shields.io/badge/TanStack_Query-FF4154?logo=reactquery&logoColor=white" alt="TanStack Query">
+  <img src="https://img.shields.io/badge/Zustand-433E38?logo=zustand&logoColor=white" alt="Zustand">
+  <img src="https://img.shields.io/badge/OpenStreetMap-7EBC6F?logo=openstreetmap&logoColor=white" alt="OpenStreetMap">
+  <img src="https://img.shields.io/badge/OpenWeather-EB6E4B?logo=openweathermap&logoColor=white" alt="OpenWeather">
+  <img src="https://img.shields.io/badge/Turf.js-FF6F00?logo=javascript&logoColor=white" alt="Turf.js">
+
+</p>
+
+---
+
 ## 🚆 What is RailGaadi?
 
 RailGaadi is a real-time Indian railway intelligence dashboard built to provide a richer visual understanding of train journeys.
@@ -414,6 +435,17 @@ RailGaadi is built using and integrating several open data sources and developer
 - [Geoapify](https://www.geoapify.com/) — geographic services
 
 ---
+
+## 👨‍💻 Developer
+
+Saumil Sikhar
+
+Information Science & Engineering  
+Dayananda Sagar Academy of Technology and Management (DSATM)  
+Bengaluru, Karnataka, India
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
