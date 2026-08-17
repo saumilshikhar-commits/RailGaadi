@@ -7,6 +7,38 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)](https://www.typescriptlang.org)
 
 ---
+## 🚆 What is RailGaadi?
+
+RailGaadi is a real-time Indian railway intelligence platform designed to provide
+a richer way to understand train journeys.
+
+Instead of showing only a basic running status, RailGaadi combines live train
+telemetry with interactive maps, station timelines, weather conditions,
+terrain/elevation and geographic context.
+
+The goal is to give passengers a complete visual picture of their journey.
+
+---
+## ⚙️ How It Works
+
+```text
+User searches for a train
+        ↓
+RailGaadi Backend
+        ↓
+Railway / Weather / Terrain APIs
+        ↓
+Data normalization + caching
+        ↓
+React Dashboard
+        ↓
+Live map + train telemetry
++ station timeline
++ weather
++ elevation
++ geographic context
+
+---
 
 ## ✨ Features
 
