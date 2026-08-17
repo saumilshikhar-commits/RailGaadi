@@ -79,37 +79,37 @@ Live map + train telemetry
 ### 🏠 Homepage
 
 <p align="center">
-  <img src="docs/screenshots/homepage.png" alt="RailGaadi Homepage" width="100%">
+  <img src="./docs/screenshots/homepage.png" alt="RailGaadi Homepage" width="100%">
 </p>
 
 ### 🔎 Train Search
 
 <p align="center">
-  <img src="docs/screenshots/search_panel.png" alt="RailGaadi Train Search" width="100%">
+  <img src="./docs/screenshots/search_panel.png" alt="RailGaadi Train Search" width="100%">
 </p>
 
 ### 📡 Live Train Tracking
 
 <p align="center">
-  <img src="docs/screenshots/live_tracking.png" alt="RailGaadi Live Train Tracking" width="100%">
+  <img src="./docs/screenshots/live_tracking.png" alt="RailGaadi Live Train Tracking" width="100%">
 </p>
 
 ### 🗺️ Interactive Vector Map
 
 <p align="center">
-  <img src="docs/screenshots/interactive_map.png" alt="RailGaadi Interactive Vector Map" width="100%">
+  <img src="./docs/screenshots/interactive_map.png" alt="RailGaadi Interactive Vector Map" width="100%">
 </p>
 
 ### ⛅ Weather Companion
 
 <p align="center">
-  <img src="docs/screenshots/weather.png" alt="RailGaadi Weather Companion" width="100%">
+  <img src="./docs/screenshots/weather.png" alt="RailGaadi Weather Companion" width="100%">
 </p>
 
 ### ⛰️ Terrain & Elevation
 
 <p align="center">
-  <img src="docs/screenshots/elevation.png" alt="RailGaadi Terrain and Elevation" width="100%">
+  <img src="./docs/screenshots/elevation.png" alt="RailGaadi Terrain and Elevation" width="100%">
 </p>
 
 ---
